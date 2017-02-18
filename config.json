@@ -1,0 +1,35 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "CC:22:3D:E3:CE:30",
+    "port": 51826,
+    "pin": "031-45-154"
+  },
+  "description": "Test test",
+  "accessories": [
+    {
+      "accessory": "GPIO",
+      "name": "Main Light",
+      "pin": 13
+    },
+    {
+      "accessory": "GPIO",
+      "name": "Auxiliary Light",
+      "pin": 11
+    },
+    {
+      "accessory": "WinPC",
+      "name": "My Computer",
+      "http_method": "GET",
+      "on_url": "wol://(MAC Address)",
+      "off_url": "http://(IP Address):8000/?action=System.Sleep",
+      "status_url": "http://(IP Address):8000/",
+      "sendimmediately": "yes",
+      "poll_status_interval": "180",
+      "username" : "User",
+      "password" : "(Password)",
+      "powerstateOnError" : "0",
+      "powerstateOnConnect" : "1"
+    }
+  ]
+}
